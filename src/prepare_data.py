@@ -24,6 +24,7 @@ def load_category_files(directory):
             records.append({"text": text, "label_name": cat, "label": label_map[cat]})
     return pd.DataFrame(records), label_map
 
+
 def split_val_test(df, seed=36):
     val_df, test_df = train_test_split(
         df,
@@ -33,12 +34,14 @@ def split_val_test(df, seed=36):
     )
     return val_df.reset_index(drop=True), test_df.reset_index(drop=True)
 
+
 #%% Run
 def main():
     os.makedirs(output_dir, exist_ok=True)
 
     print("Loading train set (clean-data/test/) …")
     train_df, label_map = load_category_files(train_dir)
+
     print("Loading val+test source (clean-data/train/) and splitting 50/50 …")
     val_test_df, _ = load_category_files(val_test_dir)
     val_df, test_df = split_val_test(val_test_df)

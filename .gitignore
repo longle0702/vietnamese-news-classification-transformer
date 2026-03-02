@@ -4,5 +4,4 @@ clean-data/
 Test_Full
 Train_Full
 src/__pycache__/
-vncp/
 *.safetensors

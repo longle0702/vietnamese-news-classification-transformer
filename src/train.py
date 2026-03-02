@@ -1,4 +1,3 @@
-
 #%% Import libraries
 import os
 import sys
@@ -10,6 +9,7 @@ import logging
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix
+from sklearn.utils.class_weight import compute_class_weight
 import torch
 from torch.utils.data import DataLoader, Dataset
 from transformers import (
@@ -28,6 +28,19 @@ logging.basicConfig(
     handlers=[logging.StreamHandler(sys.stdout)],
 )
 logger = logging.getLogger(__name__)
+
+#%% Reproducibility
+seed = 36
+def set_seed(seed=seed):
+    import random
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)          
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+    logger.info(f"Global seed set to {seed}")
 
 #%% Constants
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -121,7 +134,7 @@ class HistoryCallback:
 
 
 #%% Training helpers
-def train_one_epoch(model, loader, optimizer, scheduler, device, epoch):
+def train_one_epoch(model, loader, optimizer, scheduler, device, epoch, loss_fn):
     model.train()
     total_loss, correct, total = 0.0, 0, 0
     for step, batch in enumerate(loader, 1):
@@ -130,8 +143,8 @@ def train_one_epoch(model, loader, optimizer, scheduler, device, epoch):
         labels = batch["labels"].to(device)
 
         optimizer.zero_grad()
-        outputs = model(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
-        loss = outputs.loss
+        outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+        loss = loss_fn(outputs.logits, labels)
         loss.backward()
 
         torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
@@ -153,7 +166,7 @@ def train_one_epoch(model, loader, optimizer, scheduler, device, epoch):
 
 
 @torch.no_grad()
-def evaluate(model, loader, device):
+def evaluate(model, loader, device, loss_fn):
     model.eval()
     total_loss, correct, total = 0.0, 0, 0
     all_preds, all_labels = [], []
@@ -162,8 +175,8 @@ def evaluate(model, loader, device):
         attention_mask = batch["attention_mask"].to(device)
         labels = batch["labels"].to(device)
 
-        outputs = model(input_ids=input_ids, attention_mask=attention_mask, labels=labels)
-        total_loss += outputs.loss.item()
+        outputs = model(input_ids=input_ids, attention_mask=attention_mask)
+        total_loss += loss_fn(outputs.logits, labels).item()
         preds = outputs.logits.argmax(dim=-1)
         correct += (preds == labels).sum().item()
         total += labels.size(0)
@@ -219,6 +232,8 @@ def main():
     args = parse_args()
     os.makedirs(output_dir, exist_ok=True)
 
+    set_seed(seed)
+
     file_handler = logging.FileHandler(log_path, mode="w", encoding="utf-8")
     file_handler.setFormatter(logging.Formatter("%(asctime)s [%(levelname)s] %(message)s"))
     logging.getLogger().addHandler(file_handler)
@@ -237,6 +252,15 @@ def main():
         f"Train: {len(train_df):,}  Val: {len(val_df):,}  "
         f"Test: {len(test_df):,}  Classes: {num_labels}"
     )
+    class_weights = compute_class_weight(
+        class_weight="balanced",
+        classes=np.arange(num_labels),
+        y=train_df["label"].values,
+    )
+
+    class_weights_tensor = torch.tensor(class_weights, dtype=torch.float).to(device)
+    loss_fn = torch.nn.CrossEntropyLoss(weight=class_weights_tensor)
+    logger.info(f"Class weights: { {k: round(float(v), 4) for k, v in zip(label_map.keys(), class_weights)} }")
 
     label_map_path = os.path.join(output_dir, "label_map.json")
     with open(label_map_path, "w", encoding="utf-8") as f:
@@ -284,8 +308,8 @@ def main():
         t0 = time.time()
         logger.info(f"\n── Epoch {epoch}/{args.epochs} ──────────────────────────────")
 
-        train_loss, train_acc = train_one_epoch(model, train_loader, optimizer, scheduler, device, epoch)
-        val_loss, val_acc, val_preds, val_labels = evaluate(model, val_loader, device)
+        train_loss, train_acc = train_one_epoch(model, train_loader, optimizer, scheduler, device, epoch, loss_fn)
+        val_loss, val_acc, val_preds, val_labels = evaluate(model, val_loader, device, loss_fn)
         val_precision, val_recall, val_f1 = compute_metrics(val_preds, val_labels)
         epoch_time = time.time() - t0
 
@@ -308,15 +332,12 @@ def main():
             )
             break
 
-    logger.info(f"\nSaving final model → {output_dir}")
-    model.save_pretrained(output_dir)
-    tokenizer.save_pretrained(output_dir)
     logger.info(f"Training history → {history}")
 
     logger.info("\nEvaluating on test set …")
     best_model_loaded = AutoModelForSequenceClassification.from_pretrained(best_model)
     best_model_loaded.to(device)
-    test_loss, test_acc, test_preds, test_labels = evaluate(best_model_loaded, test_loader, device)
+    test_loss, test_acc, test_preds, test_labels = evaluate(best_model_loaded, test_loader, device, loss_fn)
     test_precision, test_recall, test_f1 = compute_metrics(test_preds, test_labels)
     logger.info(
         f"  Test loss: {test_loss:.4f}  Test acc: {test_acc:.4f}  "
@@ -331,9 +352,8 @@ def main():
 
     logger.info("=" * 60)
     logger.info("Training complete.")
-    logger.info(f"  Best model:  {best_model}")
-    logger.info(f"  Final model: {output_dir}")
-    logger.info(f"  History:     {history}")
+    logger.info(f"  Best model: {best_model}")
+    logger.info(f"  History:    {history}")
     logger.info("=" * 60)
 
 if __name__ == "__main__":
