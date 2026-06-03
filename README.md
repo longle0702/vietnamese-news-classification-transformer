@@ -65,20 +65,7 @@ vietnamese-news-classification-phobert/
 
 ## Results
 
-Training ran for **6 epochs** (early stopping triggered after epoch 6). Each epoch took approximately **21.6 minutes** on a CUDA GPU.
-
-### Training History
-
-| Epoch | Train Loss | Train Acc | Val Loss | Val Acc | Val F1 |
-|-------|-----------|-----------|----------|---------|--------|
-| 1 | 1.2123 | 75.34% | 0.4494 | 89.52% | 89.52% |
-| 2 | 0.3628 | 91.67% | 0.3444 | 90.73% | 90.68% |
-| 3 | 0.2482 | 93.58% | 0.3186 | 91.34% | 91.37% |
-| 4 | 0.1900 | 94.98% | 0.3323 | 91.81% | 91.81% |
-| 5 | 0.1529 | 96.12% | 0.3685 | 92.27% | 92.27% |
-| 6 | 0.1246 | 97.03% | 0.4426 | 91.62% | 91.62% |
-
-### Test Set Performance (Best Checkpoint — Epoch 3)
+### Test Set Performance
 
 | Metric | Score |
 |--------|-------|
@@ -87,8 +74,6 @@ Training ran for **6 epochs** (early stopping triggered after epoch 6). Each epo
 | Weighted Precision | 92.02% |
 | Weighted Recall | 91.88% |
 | Weighted F1 | 91.86% |
-
-> The best checkpoint was saved at **epoch 3** (lowest val loss: 0.3186). The confusion matrix is at `phobert-v2/confusion_matrix.png`.
 
 ---
 
