@@ -19,7 +19,7 @@ from transformers import (
 )
 from torch.optim import AdamW
 sys.path.insert(0, os.path.dirname(__file__))
-from prepare_data import load_category_files, split_val_test, train_dir, val_test_dir
+from prepare_data import load_category_files, train_dir, val_dir, test_dir
 
 #%% Logging
 logging.basicConfig(
@@ -107,6 +107,7 @@ class CheckpointCallback:
             logger.info(f"  Best model checkpoint saved → {self.save_dir}")
             return True
         return False
+
 
 class HistoryCallback:
     HEADERS = ["epoch", "split", "loss", "acc", "precision", "recall", "f1", "time_s"]
@@ -228,6 +229,7 @@ def parse_args():
     parser.add_argument("--patience", type=int, default=3)
     return parser.parse_args()
 
+
 def main():
     args = parse_args()
     os.makedirs(output_dir, exist_ok=True)
@@ -244,8 +246,8 @@ def main():
 
     logger.info("Loading data …")
     train_df, label_map = load_category_files(train_dir)
-    val_test_df, _ = load_category_files(val_test_dir)
-    val_df, test_df = split_val_test(val_test_df)
+    val_df,   _         = load_category_files(val_dir)
+    test_df,  _         = load_category_files(test_dir)
 
     num_labels = len(label_map)
     logger.info(

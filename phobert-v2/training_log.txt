@@ -1,258 +1,308 @@
-2026-03-02 17:21:06,683 [INFO] Training log → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/training_log.txt
-2026-03-02 17:21:06,813 [INFO] Using device: cuda
-2026-03-02 17:21:06,813 [INFO] Loading data …
-2026-03-02 17:21:07,980 [INFO] Train: 50,373  Val: 16,879  Test: 16,880  Classes: 10
-2026-03-02 17:21:08,135 [INFO] Class weights: {'Chinh tri Xa hoi': 0.6657, 'Doi song': 2.4741, 'Khoa hoc': 2.4033, 'Kinh doanh': 0.9548, 'Phap luat': 1.3298, 'Suc khoe': 0.9299, 'The gioi': 0.75, 'The thao': 0.7556, 'Van hoa': 0.806, 'Vi tinh': 1.1047}
-2026-03-02 17:21:08,135 [INFO] Label map saved → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/label_map.json
-2026-03-02 17:21:08,135 [INFO] Loading tokenizer: vinai/phobert-base-v2
-2026-03-02 17:21:08,532 [INFO] HTTP Request: HEAD https://huggingface.co/vinai/phobert-base-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-02 17:21:08,540 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/vinai/phobert-base-v2/e2375d266bdf39c6e8e9a87af16a5da3190b0cc8/config.json "HTTP/1.1 200 OK"
-2026-03-02 17:21:08,804 [INFO] HTTP Request: HEAD https://huggingface.co/vinai/phobert-base-v2/resolve/main/tokenizer_config.json "HTTP/1.1 404 Not Found"
-2026-03-02 17:21:09,070 [INFO] HTTP Request: HEAD https://huggingface.co/vinai/phobert-base-v2/resolve/main/tokenizer_config.json "HTTP/1.1 404 Not Found"
-2026-03-02 17:21:09,330 [INFO] HTTP Request: GET https://huggingface.co/api/models/vinai/phobert-base-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
-2026-03-02 17:21:09,592 [INFO] HTTP Request: GET https://huggingface.co/api/models/vinai/phobert-base-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
-2026-03-02 17:21:09,857 [INFO] HTTP Request: HEAD https://huggingface.co/vinai/phobert-base-v2/resolve/main/vocab.txt "HTTP/1.1 307 Temporary Redirect"
-2026-03-02 17:21:09,865 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/vinai/phobert-base-v2/e2375d266bdf39c6e8e9a87af16a5da3190b0cc8/vocab.txt "HTTP/1.1 200 OK"
-2026-03-02 17:21:10,053 [INFO] Tokenising datasets (this may take a few minutes) …
-2026-03-02 17:22:58,933 [INFO] Loading model: vinai/phobert-base-v2
-2026-03-02 17:22:59,267 [INFO] HTTP Request: HEAD https://huggingface.co/vinai/phobert-base-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
-2026-03-02 17:22:59,274 [INFO] HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/vinai/phobert-base-v2/e2375d266bdf39c6e8e9a87af16a5da3190b0cc8/config.json "HTTP/1.1 200 OK"
-2026-03-02 17:22:59,749 [INFO] HTTP Request: HEAD https://huggingface.co/vinai/phobert-base-v2/resolve/main/model.safetensors "HTTP/1.1 404 Not Found"
-2026-03-02 17:23:00,013 [INFO] HTTP Request: GET https://huggingface.co/api/models/vinai/phobert-base-v2 "HTTP/1.1 200 OK"
-2026-03-02 17:23:00,044 [INFO] Total training steps: 15,750  Warmup steps: 1,575
-2026-03-02 17:23:00,044 [INFO] ============================================================
-2026-03-02 17:23:00,044 [INFO] Starting training …
-2026-03-02 17:23:00,044 [INFO] ============================================================
-2026-03-02 17:23:00,044 [INFO] 
+2026-06-03 16:19:53,760 [INFO] Training log → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/training_log.txt
+2026-06-03 16:19:53,899 [INFO] Using device: cuda
+2026-06-03 16:19:53,899 [INFO] Loading data …
+2026-06-03 16:19:54,979 [INFO] Train: 58,893  Val: 12,619  Test: 12,620  Classes: 10
+2026-06-03 16:19:55,161 [INFO] Class weights: {'Chinh tri Xa hoi': 0.658, 'Doi song': 1.6197, 'Khoa hoc': 2.1486, 'Kinh doanh': 1.0747, 'Phap luat': 1.099, 'Suc khoe': 0.9559, 'The gioi': 0.8751, 'The thao': 0.7031, 'Van hoa': 0.9017, 'Vi tinh': 1.1948}
+2026-06-03 16:19:55,162 [INFO] Label map saved → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/label_map.json
+2026-06-03 16:19:55,162 [INFO] Loading tokenizer: vinai/phobert-base-v2
+2026-06-03 16:19:56,469 [INFO] Tokenising datasets (this may take a few minutes) …
+2026-06-03 16:22:40,249 [INFO] Loading model: vinai/phobert-base-v2
+2026-06-03 16:22:41,041 [INFO] Total training steps: 18,410  Warmup steps: 1,841
+2026-06-03 16:22:41,041 [INFO] ============================================================
+2026-06-03 16:22:41,041 [INFO] Starting training …
+2026-06-03 16:22:41,041 [INFO] ============================================================
+2026-06-03 16:22:41,041 [INFO] 
 ── Epoch 1/10 ──────────────────────────────
-2026-03-02 17:23:00,286 [INFO] HTTP Request: GET https://huggingface.co/api/models/vinai/phobert-base-v2/commits/main "HTTP/1.1 200 OK"
-2026-03-02 17:23:00,555 [INFO] HTTP Request: GET https://huggingface.co/api/models/vinai/phobert-base-v2/discussions?p=0 "HTTP/1.1 200 OK"
-2026-03-02 17:23:00,915 [INFO] HTTP Request: GET https://huggingface.co/api/models/vinai/phobert-base-v2/commits/refs%2Fpr%2F3 "HTTP/1.1 200 OK"
-2026-03-02 17:23:01,171 [INFO] HTTP Request: HEAD https://huggingface.co/vinai/phobert-base-v2/resolve/refs%2Fpr%2F3/model.safetensors.index.json "HTTP/1.1 404 Not Found"
-2026-03-02 17:23:01,435 [INFO] HTTP Request: HEAD https://huggingface.co/vinai/phobert-base-v2/resolve/refs%2Fpr%2F3/model.safetensors "HTTP/1.1 302 Found"
-2026-03-02 17:23:36,974 [INFO]   Epoch 1 | step 50/1575 | loss=2.3158 | acc=0.0938
-2026-03-02 17:24:13,709 [INFO]   Epoch 1 | step 100/1575 | loss=2.3110 | acc=0.1069
-2026-03-02 17:24:50,549 [INFO]   Epoch 1 | step 150/1575 | loss=2.3015 | acc=0.1283
-2026-03-02 17:25:27,526 [INFO]   Epoch 1 | step 200/1575 | loss=2.2866 | acc=0.1697
-2026-03-02 17:26:04,561 [INFO]   Epoch 1 | step 250/1575 | loss=2.2660 | acc=0.2231
-2026-03-02 17:26:41,617 [INFO]   Epoch 1 | step 300/1575 | loss=2.2396 | acc=0.2803
-2026-03-02 17:27:18,668 [INFO]   Epoch 1 | step 350/1575 | loss=2.2056 | acc=0.3412
-2026-03-02 17:27:55,720 [INFO]   Epoch 1 | step 400/1575 | loss=2.1621 | acc=0.3947
-2026-03-02 17:28:32,779 [INFO]   Epoch 1 | step 450/1575 | loss=2.1125 | acc=0.4390
-2026-03-02 17:29:09,821 [INFO]   Epoch 1 | step 500/1575 | loss=2.0592 | acc=0.4765
-2026-03-02 17:29:46,859 [INFO]   Epoch 1 | step 550/1575 | loss=2.0050 | acc=0.5077
-2026-03-02 17:30:23,895 [INFO]   Epoch 1 | step 600/1575 | loss=1.9488 | acc=0.5350
-2026-03-02 17:31:00,939 [INFO]   Epoch 1 | step 650/1575 | loss=1.8936 | acc=0.5600
-2026-03-02 17:31:37,975 [INFO]   Epoch 1 | step 700/1575 | loss=1.8414 | acc=0.5802
-2026-03-02 17:32:15,010 [INFO]   Epoch 1 | step 750/1575 | loss=1.7907 | acc=0.5983
-2026-03-02 17:32:52,018 [INFO]   Epoch 1 | step 800/1575 | loss=1.7410 | acc=0.6155
-2026-03-02 17:33:29,061 [INFO]   Epoch 1 | step 850/1575 | loss=1.6924 | acc=0.6312
-2026-03-02 17:34:06,102 [INFO]   Epoch 1 | step 900/1575 | loss=1.6476 | acc=0.6455
-2026-03-02 17:34:43,139 [INFO]   Epoch 1 | step 950/1575 | loss=1.6035 | acc=0.6586
-2026-03-02 17:35:20,154 [INFO]   Epoch 1 | step 1000/1575 | loss=1.5625 | acc=0.6701
-2026-03-02 17:35:57,166 [INFO]   Epoch 1 | step 1050/1575 | loss=1.5231 | acc=0.6809
-2026-03-02 17:36:34,180 [INFO]   Epoch 1 | step 1100/1575 | loss=1.4859 | acc=0.6911
-2026-03-02 17:37:11,208 [INFO]   Epoch 1 | step 1150/1575 | loss=1.4516 | acc=0.7000
-2026-03-02 17:37:48,230 [INFO]   Epoch 1 | step 1200/1575 | loss=1.4169 | acc=0.7085
-2026-03-02 17:38:25,260 [INFO]   Epoch 1 | step 1250/1575 | loss=1.3861 | acc=0.7157
-2026-03-02 17:39:02,288 [INFO]   Epoch 1 | step 1300/1575 | loss=1.3557 | acc=0.7228
-2026-03-02 17:39:39,294 [INFO]   Epoch 1 | step 1350/1575 | loss=1.3270 | acc=0.7294
-2026-03-02 17:40:16,288 [INFO]   Epoch 1 | step 1400/1575 | loss=1.2996 | acc=0.7354
-2026-03-02 17:40:53,304 [INFO]   Epoch 1 | step 1450/1575 | loss=1.2727 | acc=0.7411
-2026-03-02 17:41:30,326 [INFO]   Epoch 1 | step 1500/1575 | loss=1.2480 | acc=0.7462
-2026-03-02 17:42:07,344 [INFO]   Epoch 1 | step 1550/1575 | loss=1.2232 | acc=0.7511
-2026-03-02 17:42:25,285 [INFO]   Epoch 1 | step 1575/1575 | loss=1.2123 | acc=0.7534
-2026-03-02 17:44:38,029 [INFO]   [Summary] train_loss=1.2123  train_acc=0.7534 | val_loss=0.4494  val_acc=0.8952  val_precision=0.9003  val_recall=0.8952  val_f1=0.8952 | time=1298.0s
-2026-03-02 17:44:38,758 [INFO]   Best model checkpoint saved → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/best_model
-2026-03-02 17:44:38,759 [INFO] 
+2026-06-03 16:23:18,128 [INFO]   Epoch 1 | step 50/1841 | loss=2.3205 | acc=0.0869
+2026-06-03 16:23:55,009 [INFO]   Epoch 1 | step 100/1841 | loss=2.3139 | acc=0.1034
+2026-06-03 16:24:32,036 [INFO]   Epoch 1 | step 150/1841 | loss=2.3082 | acc=0.1190
+2026-06-03 16:25:09,204 [INFO]   Epoch 1 | step 200/1841 | loss=2.2990 | acc=0.1433
+2026-06-03 16:25:46,418 [INFO]   Epoch 1 | step 250/1841 | loss=2.2846 | acc=0.1789
+2026-06-03 16:26:23,653 [INFO]   Epoch 1 | step 300/1841 | loss=2.2628 | acc=0.2383
+2026-06-03 16:27:00,889 [INFO]   Epoch 1 | step 350/1841 | loss=2.2324 | acc=0.3014
+2026-06-03 16:27:38,117 [INFO]   Epoch 1 | step 400/1841 | loss=2.1946 | acc=0.3527
+2026-06-03 16:28:15,336 [INFO]   Epoch 1 | step 450/1841 | loss=2.1500 | acc=0.3987
+2026-06-03 16:28:52,542 [INFO]   Epoch 1 | step 500/1841 | loss=2.1020 | acc=0.4351
+2026-06-03 16:29:29,762 [INFO]   Epoch 1 | step 550/1841 | loss=2.0520 | acc=0.4677
+2026-06-03 16:30:06,962 [INFO]   Epoch 1 | step 600/1841 | loss=1.9999 | acc=0.4977
+2026-06-03 16:30:44,160 [INFO]   Epoch 1 | step 650/1841 | loss=1.9491 | acc=0.5235
+2026-06-03 16:31:21,354 [INFO]   Epoch 1 | step 700/1841 | loss=1.8972 | acc=0.5478
+2026-06-03 16:31:58,537 [INFO]   Epoch 1 | step 750/1841 | loss=1.8491 | acc=0.5677
+2026-06-03 16:32:35,734 [INFO]   Epoch 1 | step 800/1841 | loss=1.8016 | acc=0.5860
+2026-06-03 16:33:12,947 [INFO]   Epoch 1 | step 850/1841 | loss=1.7560 | acc=0.6031
+2026-06-03 16:33:50,135 [INFO]   Epoch 1 | step 900/1841 | loss=1.7126 | acc=0.6181
+2026-06-03 16:34:27,328 [INFO]   Epoch 1 | step 950/1841 | loss=1.6690 | acc=0.6330
+2026-06-03 16:35:04,535 [INFO]   Epoch 1 | step 1000/1841 | loss=1.6303 | acc=0.6450
+2026-06-03 16:35:41,732 [INFO]   Epoch 1 | step 1050/1841 | loss=1.5926 | acc=0.6560
+2026-06-03 16:36:18,934 [INFO]   Epoch 1 | step 1100/1841 | loss=1.5553 | acc=0.6671
+2026-06-03 16:36:56,129 [INFO]   Epoch 1 | step 1150/1841 | loss=1.5209 | acc=0.6762
+2026-06-03 16:37:33,305 [INFO]   Epoch 1 | step 1200/1841 | loss=1.4873 | acc=0.6849
+2026-06-03 16:38:10,492 [INFO]   Epoch 1 | step 1250/1841 | loss=1.4566 | acc=0.6930
+2026-06-03 16:38:47,677 [INFO]   Epoch 1 | step 1300/1841 | loss=1.4278 | acc=0.7001
+2026-06-03 16:39:24,857 [INFO]   Epoch 1 | step 1350/1841 | loss=1.3989 | acc=0.7069
+2026-06-03 16:40:02,041 [INFO]   Epoch 1 | step 1400/1841 | loss=1.3709 | acc=0.7137
+2026-06-03 16:40:39,211 [INFO]   Epoch 1 | step 1450/1841 | loss=1.3440 | acc=0.7201
+2026-06-03 16:41:16,377 [INFO]   Epoch 1 | step 1500/1841 | loss=1.3184 | acc=0.7262
+2026-06-03 16:41:53,542 [INFO]   Epoch 1 | step 1550/1841 | loss=1.2945 | acc=0.7312
+2026-06-03 16:42:30,707 [INFO]   Epoch 1 | step 1600/1841 | loss=1.2713 | acc=0.7362
+2026-06-03 16:43:07,873 [INFO]   Epoch 1 | step 1650/1841 | loss=1.2488 | acc=0.7409
+2026-06-03 16:43:45,034 [INFO]   Epoch 1 | step 1700/1841 | loss=1.2268 | acc=0.7458
+2026-06-03 16:44:22,209 [INFO]   Epoch 1 | step 1750/1841 | loss=1.2065 | acc=0.7500
+2026-06-03 16:44:59,373 [INFO]   Epoch 1 | step 1800/1841 | loss=1.1866 | acc=0.7540
+2026-06-03 16:45:29,455 [INFO]   Epoch 1 | step 1841/1841 | loss=1.1711 | acc=0.7571
+2026-06-03 16:47:09,031 [INFO]   [Summary] train_loss=1.1711  train_acc=0.7571 | val_loss=0.4038  val_acc=0.9054  val_precision=0.9056  val_recall=0.9054  val_f1=0.9050 | time=1468.0s
+2026-06-03 16:47:10,184 [INFO]   Best model checkpoint saved → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/best_model
+2026-06-03 16:47:10,184 [INFO] 
 ── Epoch 2/10 ──────────────────────────────
-2026-03-02 17:45:15,920 [INFO]   Epoch 2 | step 50/1575 | loss=0.4537 | acc=0.9156
-2026-03-02 17:45:52,961 [INFO]   Epoch 2 | step 100/1575 | loss=0.4408 | acc=0.9172
-2026-03-02 17:46:29,990 [INFO]   Epoch 2 | step 150/1575 | loss=0.4411 | acc=0.9140
-2026-03-02 17:47:07,029 [INFO]   Epoch 2 | step 200/1575 | loss=0.4335 | acc=0.9141
-2026-03-02 17:47:44,056 [INFO]   Epoch 2 | step 250/1575 | loss=0.4336 | acc=0.9124
-2026-03-02 17:48:21,085 [INFO]   Epoch 2 | step 300/1575 | loss=0.4294 | acc=0.9130
-2026-03-02 17:48:58,116 [INFO]   Epoch 2 | step 350/1575 | loss=0.4251 | acc=0.9133
-2026-03-02 17:49:35,145 [INFO]   Epoch 2 | step 400/1575 | loss=0.4216 | acc=0.9134
-2026-03-02 17:50:12,180 [INFO]   Epoch 2 | step 450/1575 | loss=0.4191 | acc=0.9126
-2026-03-02 17:50:49,204 [INFO]   Epoch 2 | step 500/1575 | loss=0.4134 | acc=0.9127
-2026-03-02 17:51:26,245 [INFO]   Epoch 2 | step 550/1575 | loss=0.4127 | acc=0.9113
-2026-03-02 17:52:03,262 [INFO]   Epoch 2 | step 600/1575 | loss=0.4099 | acc=0.9116
-2026-03-02 17:52:40,291 [INFO]   Epoch 2 | step 650/1575 | loss=0.4063 | acc=0.9118
-2026-03-02 17:53:17,315 [INFO]   Epoch 2 | step 700/1575 | loss=0.4028 | acc=0.9121
-2026-03-02 17:53:54,344 [INFO]   Epoch 2 | step 750/1575 | loss=0.4007 | acc=0.9119
-2026-03-02 17:54:31,375 [INFO]   Epoch 2 | step 800/1575 | loss=0.3970 | acc=0.9125
-2026-03-02 17:55:08,386 [INFO]   Epoch 2 | step 850/1575 | loss=0.3941 | acc=0.9132
-2026-03-02 17:55:45,412 [INFO]   Epoch 2 | step 900/1575 | loss=0.3902 | acc=0.9139
-2026-03-02 17:56:22,445 [INFO]   Epoch 2 | step 950/1575 | loss=0.3886 | acc=0.9143
-2026-03-02 17:56:59,482 [INFO]   Epoch 2 | step 1000/1575 | loss=0.3855 | acc=0.9148
-2026-03-02 17:57:36,517 [INFO]   Epoch 2 | step 1050/1575 | loss=0.3845 | acc=0.9150
-2026-03-02 17:58:13,562 [INFO]   Epoch 2 | step 1100/1575 | loss=0.3817 | acc=0.9153
-2026-03-02 17:58:50,622 [INFO]   Epoch 2 | step 1150/1575 | loss=0.3795 | acc=0.9153
-2026-03-02 17:59:27,652 [INFO]   Epoch 2 | step 1200/1575 | loss=0.3784 | acc=0.9152
-2026-03-02 18:00:04,683 [INFO]   Epoch 2 | step 1250/1575 | loss=0.3750 | acc=0.9159
-2026-03-02 18:00:41,739 [INFO]   Epoch 2 | step 1300/1575 | loss=0.3728 | acc=0.9159
-2026-03-02 18:01:18,785 [INFO]   Epoch 2 | step 1350/1575 | loss=0.3705 | acc=0.9161
-2026-03-02 18:01:55,820 [INFO]   Epoch 2 | step 1400/1575 | loss=0.3682 | acc=0.9163
-2026-03-02 18:02:32,856 [INFO]   Epoch 2 | step 1450/1575 | loss=0.3681 | acc=0.9162
-2026-03-02 18:03:09,888 [INFO]   Epoch 2 | step 1500/1575 | loss=0.3661 | acc=0.9164
-2026-03-02 18:03:46,916 [INFO]   Epoch 2 | step 1550/1575 | loss=0.3637 | acc=0.9166
-2026-03-02 18:04:04,855 [INFO]   Epoch 2 | step 1575/1575 | loss=0.3628 | acc=0.9167
-2026-03-02 18:06:17,634 [INFO]   [Summary] train_loss=0.3628  train_acc=0.9167 | val_loss=0.3444  val_acc=0.9073  val_precision=0.9084  val_recall=0.9073  val_f1=0.9068 | time=1298.9s
-2026-03-02 18:06:18,841 [INFO]   Best model checkpoint saved → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/best_model
-2026-03-02 18:06:18,842 [INFO] 
+2026-06-03 16:47:47,470 [INFO]   Epoch 2 | step 50/1841 | loss=0.4316 | acc=0.9125
+2026-06-03 16:48:24,646 [INFO]   Epoch 2 | step 100/1841 | loss=0.4297 | acc=0.9094
+2026-06-03 16:49:01,821 [INFO]   Epoch 2 | step 150/1841 | loss=0.4292 | acc=0.9098
+2026-06-03 16:49:38,988 [INFO]   Epoch 2 | step 200/1841 | loss=0.4263 | acc=0.9098
+2026-06-03 16:50:16,154 [INFO]   Epoch 2 | step 250/1841 | loss=0.4192 | acc=0.9099
+2026-06-03 16:50:53,319 [INFO]   Epoch 2 | step 300/1841 | loss=0.4094 | acc=0.9120
+2026-06-03 16:51:30,489 [INFO]   Epoch 2 | step 350/1841 | loss=0.4071 | acc=0.9118
+2026-06-03 16:52:07,643 [INFO]   Epoch 2 | step 400/1841 | loss=0.4052 | acc=0.9108
+2026-06-03 16:52:44,800 [INFO]   Epoch 2 | step 450/1841 | loss=0.4007 | acc=0.9110
+2026-06-03 16:53:21,963 [INFO]   Epoch 2 | step 500/1841 | loss=0.3996 | acc=0.9108
+2026-06-03 16:53:59,123 [INFO]   Epoch 2 | step 550/1841 | loss=0.3978 | acc=0.9109
+2026-06-03 16:54:36,264 [INFO]   Epoch 2 | step 600/1841 | loss=0.3921 | acc=0.9114
+2026-06-03 16:55:13,432 [INFO]   Epoch 2 | step 650/1841 | loss=0.3888 | acc=0.9117
+2026-06-03 16:55:50,593 [INFO]   Epoch 2 | step 700/1841 | loss=0.3872 | acc=0.9116
+2026-06-03 16:56:27,757 [INFO]   Epoch 2 | step 750/1841 | loss=0.3839 | acc=0.9119
+2026-06-03 16:57:04,926 [INFO]   Epoch 2 | step 800/1841 | loss=0.3818 | acc=0.9114
+2026-06-03 16:57:42,096 [INFO]   Epoch 2 | step 850/1841 | loss=0.3777 | acc=0.9121
+2026-06-03 16:58:19,256 [INFO]   Epoch 2 | step 900/1841 | loss=0.3754 | acc=0.9118
+2026-06-03 16:58:56,427 [INFO]   Epoch 2 | step 950/1841 | loss=0.3738 | acc=0.9117
+2026-06-03 16:59:33,588 [INFO]   Epoch 2 | step 1000/1841 | loss=0.3717 | acc=0.9120
+2026-06-03 17:00:10,757 [INFO]   Epoch 2 | step 1050/1841 | loss=0.3702 | acc=0.9119
+2026-06-03 17:00:47,934 [INFO]   Epoch 2 | step 1100/1841 | loss=0.3693 | acc=0.9119
+2026-06-03 17:01:25,105 [INFO]   Epoch 2 | step 1150/1841 | loss=0.3690 | acc=0.9114
+2026-06-03 17:02:02,267 [INFO]   Epoch 2 | step 1200/1841 | loss=0.3658 | acc=0.9119
+2026-06-03 17:02:39,434 [INFO]   Epoch 2 | step 1250/1841 | loss=0.3650 | acc=0.9119
+2026-06-03 17:03:16,599 [INFO]   Epoch 2 | step 1300/1841 | loss=0.3643 | acc=0.9117
+2026-06-03 17:03:53,772 [INFO]   Epoch 2 | step 1350/1841 | loss=0.3626 | acc=0.9120
+2026-06-03 17:04:30,947 [INFO]   Epoch 2 | step 1400/1841 | loss=0.3604 | acc=0.9124
+2026-06-03 17:05:08,110 [INFO]   Epoch 2 | step 1450/1841 | loss=0.3589 | acc=0.9125
+2026-06-03 17:05:45,282 [INFO]   Epoch 2 | step 1500/1841 | loss=0.3578 | acc=0.9124
+2026-06-03 17:06:22,440 [INFO]   Epoch 2 | step 1550/1841 | loss=0.3569 | acc=0.9124
+2026-06-03 17:06:59,602 [INFO]   Epoch 2 | step 1600/1841 | loss=0.3559 | acc=0.9125
+2026-06-03 17:07:36,760 [INFO]   Epoch 2 | step 1650/1841 | loss=0.3544 | acc=0.9124
+2026-06-03 17:08:13,927 [INFO]   Epoch 2 | step 1700/1841 | loss=0.3527 | acc=0.9126
+2026-06-03 17:08:51,090 [INFO]   Epoch 2 | step 1750/1841 | loss=0.3512 | acc=0.9127
+2026-06-03 17:09:28,261 [INFO]   Epoch 2 | step 1800/1841 | loss=0.3490 | acc=0.9132
+2026-06-03 17:09:58,334 [INFO]   Epoch 2 | step 1841/1841 | loss=0.3485 | acc=0.9133
+2026-06-03 17:11:37,950 [INFO]   [Summary] train_loss=0.3485  train_acc=0.9133 | val_loss=0.2986  val_acc=0.9124  val_precision=0.9144  val_recall=0.9124  val_f1=0.9125 | time=1467.8s
+2026-06-03 17:11:39,240 [INFO]   Best model checkpoint saved → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/best_model
+2026-06-03 17:11:39,240 [INFO] 
 ── Epoch 3/10 ──────────────────────────────
-2026-03-02 18:06:55,978 [INFO]   Epoch 3 | step 50/1575 | loss=0.2949 | acc=0.9287
-2026-03-02 18:07:33,005 [INFO]   Epoch 3 | step 100/1575 | loss=0.2679 | acc=0.9344
-2026-03-02 18:08:10,033 [INFO]   Epoch 3 | step 150/1575 | loss=0.2747 | acc=0.9369
-2026-03-02 18:08:47,053 [INFO]   Epoch 3 | step 200/1575 | loss=0.2684 | acc=0.9361
-2026-03-02 18:09:24,092 [INFO]   Epoch 3 | step 250/1575 | loss=0.2656 | acc=0.9353
-2026-03-02 18:10:01,131 [INFO]   Epoch 3 | step 300/1575 | loss=0.2628 | acc=0.9354
-2026-03-02 18:10:38,143 [INFO]   Epoch 3 | step 350/1575 | loss=0.2603 | acc=0.9360
-2026-03-02 18:11:15,151 [INFO]   Epoch 3 | step 400/1575 | loss=0.2563 | acc=0.9363
-2026-03-02 18:11:52,158 [INFO]   Epoch 3 | step 450/1575 | loss=0.2583 | acc=0.9353
-2026-03-02 18:12:29,170 [INFO]   Epoch 3 | step 500/1575 | loss=0.2601 | acc=0.9348
-2026-03-02 18:13:06,193 [INFO]   Epoch 3 | step 550/1575 | loss=0.2591 | acc=0.9347
-2026-03-02 18:13:43,202 [INFO]   Epoch 3 | step 600/1575 | loss=0.2582 | acc=0.9357
-2026-03-02 18:14:20,193 [INFO]   Epoch 3 | step 650/1575 | loss=0.2572 | acc=0.9357
-2026-03-02 18:14:57,193 [INFO]   Epoch 3 | step 700/1575 | loss=0.2560 | acc=0.9359
-2026-03-02 18:15:34,224 [INFO]   Epoch 3 | step 750/1575 | loss=0.2563 | acc=0.9351
-2026-03-02 18:16:11,249 [INFO]   Epoch 3 | step 800/1575 | loss=0.2528 | acc=0.9359
-2026-03-02 18:16:48,282 [INFO]   Epoch 3 | step 850/1575 | loss=0.2526 | acc=0.9358
-2026-03-02 18:17:25,303 [INFO]   Epoch 3 | step 900/1575 | loss=0.2526 | acc=0.9358
-2026-03-02 18:18:02,327 [INFO]   Epoch 3 | step 950/1575 | loss=0.2527 | acc=0.9359
-2026-03-02 18:18:39,360 [INFO]   Epoch 3 | step 1000/1575 | loss=0.2521 | acc=0.9355
-2026-03-02 18:19:16,390 [INFO]   Epoch 3 | step 1050/1575 | loss=0.2506 | acc=0.9360
-2026-03-02 18:19:53,430 [INFO]   Epoch 3 | step 1100/1575 | loss=0.2509 | acc=0.9355
-2026-03-02 18:20:30,466 [INFO]   Epoch 3 | step 1150/1575 | loss=0.2497 | acc=0.9353
-2026-03-02 18:21:07,487 [INFO]   Epoch 3 | step 1200/1575 | loss=0.2494 | acc=0.9355
-2026-03-02 18:21:44,507 [INFO]   Epoch 3 | step 1250/1575 | loss=0.2504 | acc=0.9353
-2026-03-02 18:22:21,526 [INFO]   Epoch 3 | step 1300/1575 | loss=0.2510 | acc=0.9351
-2026-03-02 18:22:58,562 [INFO]   Epoch 3 | step 1350/1575 | loss=0.2503 | acc=0.9354
-2026-03-02 18:23:35,587 [INFO]   Epoch 3 | step 1400/1575 | loss=0.2488 | acc=0.9358
-2026-03-02 18:24:12,615 [INFO]   Epoch 3 | step 1450/1575 | loss=0.2481 | acc=0.9359
-2026-03-02 18:24:49,637 [INFO]   Epoch 3 | step 1500/1575 | loss=0.2484 | acc=0.9359
-2026-03-02 18:25:26,664 [INFO]   Epoch 3 | step 1550/1575 | loss=0.2485 | acc=0.9359
-2026-03-02 18:25:44,606 [INFO]   Epoch 3 | step 1575/1575 | loss=0.2482 | acc=0.9358
-2026-03-02 18:27:57,421 [INFO]   [Summary] train_loss=0.2482  train_acc=0.9358 | val_loss=0.3186  val_acc=0.9134  val_precision=0.9147  val_recall=0.9134  val_f1=0.9137 | time=1298.6s
-2026-03-02 18:27:58,568 [INFO]   Best model checkpoint saved → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/best_model
-2026-03-02 18:27:58,569 [INFO] 
+2026-06-03 17:12:16,526 [INFO]   Epoch 3 | step 50/1841 | loss=0.2857 | acc=0.9163
+2026-06-03 17:12:53,695 [INFO]   Epoch 3 | step 100/1841 | loss=0.2904 | acc=0.9194
+2026-06-03 17:13:30,849 [INFO]   Epoch 3 | step 150/1841 | loss=0.2685 | acc=0.9275
+2026-06-03 17:14:08,005 [INFO]   Epoch 3 | step 200/1841 | loss=0.2653 | acc=0.9280
+2026-06-03 17:14:45,175 [INFO]   Epoch 3 | step 250/1841 | loss=0.2604 | acc=0.9290
+2026-06-03 17:15:22,360 [INFO]   Epoch 3 | step 300/1841 | loss=0.2552 | acc=0.9301
+2026-06-03 17:15:59,543 [INFO]   Epoch 3 | step 350/1841 | loss=0.2562 | acc=0.9296
+2026-06-03 17:16:36,716 [INFO]   Epoch 3 | step 400/1841 | loss=0.2552 | acc=0.9299
+2026-06-03 17:17:13,897 [INFO]   Epoch 3 | step 450/1841 | loss=0.2490 | acc=0.9315
+2026-06-03 17:17:51,055 [INFO]   Epoch 3 | step 500/1841 | loss=0.2494 | acc=0.9312
+2026-06-03 17:18:28,221 [INFO]   Epoch 3 | step 550/1841 | loss=0.2470 | acc=0.9321
+2026-06-03 17:19:05,385 [INFO]   Epoch 3 | step 600/1841 | loss=0.2475 | acc=0.9322
+2026-06-03 17:19:42,551 [INFO]   Epoch 3 | step 650/1841 | loss=0.2454 | acc=0.9334
+2026-06-03 17:20:19,716 [INFO]   Epoch 3 | step 700/1841 | loss=0.2431 | acc=0.9340
+2026-06-03 17:20:56,874 [INFO]   Epoch 3 | step 750/1841 | loss=0.2427 | acc=0.9342
+2026-06-03 17:21:34,039 [INFO]   Epoch 3 | step 800/1841 | loss=0.2445 | acc=0.9329
+2026-06-03 17:22:11,209 [INFO]   Epoch 3 | step 850/1841 | loss=0.2430 | acc=0.9331
+2026-06-03 17:22:48,371 [INFO]   Epoch 3 | step 900/1841 | loss=0.2430 | acc=0.9331
+2026-06-03 17:23:25,547 [INFO]   Epoch 3 | step 950/1841 | loss=0.2439 | acc=0.9325
+2026-06-03 17:24:02,732 [INFO]   Epoch 3 | step 1000/1841 | loss=0.2442 | acc=0.9323
+2026-06-03 17:24:39,912 [INFO]   Epoch 3 | step 1050/1841 | loss=0.2441 | acc=0.9322
+2026-06-03 17:25:17,085 [INFO]   Epoch 3 | step 1100/1841 | loss=0.2454 | acc=0.9320
+2026-06-03 17:25:54,252 [INFO]   Epoch 3 | step 1150/1841 | loss=0.2444 | acc=0.9321
+2026-06-03 17:26:31,421 [INFO]   Epoch 3 | step 1200/1841 | loss=0.2451 | acc=0.9318
+2026-06-03 17:27:08,601 [INFO]   Epoch 3 | step 1250/1841 | loss=0.2450 | acc=0.9319
+2026-06-03 17:27:45,775 [INFO]   Epoch 3 | step 1300/1841 | loss=0.2452 | acc=0.9319
+2026-06-03 17:28:22,953 [INFO]   Epoch 3 | step 1350/1841 | loss=0.2443 | acc=0.9321
+2026-06-03 17:29:00,115 [INFO]   Epoch 3 | step 1400/1841 | loss=0.2435 | acc=0.9323
+2026-06-03 17:29:37,270 [INFO]   Epoch 3 | step 1450/1841 | loss=0.2429 | acc=0.9325
+2026-06-03 17:30:14,434 [INFO]   Epoch 3 | step 1500/1841 | loss=0.2426 | acc=0.9325
+2026-06-03 17:30:51,600 [INFO]   Epoch 3 | step 1550/1841 | loss=0.2423 | acc=0.9327
+2026-06-03 17:31:28,780 [INFO]   Epoch 3 | step 1600/1841 | loss=0.2422 | acc=0.9325
+2026-06-03 17:32:05,961 [INFO]   Epoch 3 | step 1650/1841 | loss=0.2410 | acc=0.9328
+2026-06-03 17:32:43,146 [INFO]   Epoch 3 | step 1700/1841 | loss=0.2409 | acc=0.9328
+2026-06-03 17:33:20,313 [INFO]   Epoch 3 | step 1750/1841 | loss=0.2404 | acc=0.9327
+2026-06-03 17:33:57,479 [INFO]   Epoch 3 | step 1800/1841 | loss=0.2393 | acc=0.9329
+2026-06-03 17:34:27,557 [INFO]   Epoch 3 | step 1841/1841 | loss=0.2387 | acc=0.9331
+2026-06-03 17:36:07,161 [INFO]   [Summary] train_loss=0.2387  train_acc=0.9331 | val_loss=0.3078  val_acc=0.9150  val_precision=0.9155  val_recall=0.9150  val_f1=0.9132 | time=1467.9s
+2026-06-03 17:36:07,161 [INFO] 
 ── Epoch 4/10 ──────────────────────────────
-2026-03-02 18:28:35,719 [INFO]   Epoch 4 | step 50/1575 | loss=0.1722 | acc=0.9487
-2026-03-02 18:29:12,746 [INFO]   Epoch 4 | step 100/1575 | loss=0.2001 | acc=0.9453
-2026-03-02 18:29:49,772 [INFO]   Epoch 4 | step 150/1575 | loss=0.1984 | acc=0.9452
-2026-03-02 18:30:26,790 [INFO]   Epoch 4 | step 200/1575 | loss=0.1899 | acc=0.9459
-2026-03-02 18:31:03,813 [INFO]   Epoch 4 | step 250/1575 | loss=0.1954 | acc=0.9453
-2026-03-02 18:31:40,838 [INFO]   Epoch 4 | step 300/1575 | loss=0.1964 | acc=0.9456
-2026-03-02 18:32:17,875 [INFO]   Epoch 4 | step 350/1575 | loss=0.1963 | acc=0.9458
-2026-03-02 18:32:54,904 [INFO]   Epoch 4 | step 400/1575 | loss=0.1994 | acc=0.9454
-2026-03-02 18:33:31,936 [INFO]   Epoch 4 | step 450/1575 | loss=0.1969 | acc=0.9462
-2026-03-02 18:34:08,970 [INFO]   Epoch 4 | step 500/1575 | loss=0.1938 | acc=0.9471
-2026-03-02 18:34:46,003 [INFO]   Epoch 4 | step 550/1575 | loss=0.1928 | acc=0.9471
-2026-03-02 18:35:23,050 [INFO]   Epoch 4 | step 600/1575 | loss=0.1940 | acc=0.9475
-2026-03-02 18:36:00,087 [INFO]   Epoch 4 | step 650/1575 | loss=0.1931 | acc=0.9476
-2026-03-02 18:36:37,124 [INFO]   Epoch 4 | step 700/1575 | loss=0.1917 | acc=0.9480
-2026-03-02 18:37:14,155 [INFO]   Epoch 4 | step 750/1575 | loss=0.1905 | acc=0.9484
-2026-03-02 18:37:51,208 [INFO]   Epoch 4 | step 800/1575 | loss=0.1905 | acc=0.9485
-2026-03-02 18:38:28,245 [INFO]   Epoch 4 | step 850/1575 | loss=0.1895 | acc=0.9489
-2026-03-02 18:39:05,288 [INFO]   Epoch 4 | step 900/1575 | loss=0.1900 | acc=0.9488
-2026-03-02 18:39:42,331 [INFO]   Epoch 4 | step 950/1575 | loss=0.1890 | acc=0.9494
-2026-03-02 18:40:19,376 [INFO]   Epoch 4 | step 1000/1575 | loss=0.1895 | acc=0.9492
-2026-03-02 18:40:56,391 [INFO]   Epoch 4 | step 1050/1575 | loss=0.1888 | acc=0.9495
-2026-03-02 18:41:33,420 [INFO]   Epoch 4 | step 1100/1575 | loss=0.1901 | acc=0.9494
-2026-03-02 18:42:10,431 [INFO]   Epoch 4 | step 1150/1575 | loss=0.1906 | acc=0.9493
-2026-03-02 18:42:47,458 [INFO]   Epoch 4 | step 1200/1575 | loss=0.1908 | acc=0.9493
-2026-03-02 18:43:24,481 [INFO]   Epoch 4 | step 1250/1575 | loss=0.1902 | acc=0.9492
-2026-03-02 18:44:01,506 [INFO]   Epoch 4 | step 1300/1575 | loss=0.1895 | acc=0.9495
-2026-03-02 18:44:38,522 [INFO]   Epoch 4 | step 1350/1575 | loss=0.1912 | acc=0.9494
-2026-03-02 18:45:15,546 [INFO]   Epoch 4 | step 1400/1575 | loss=0.1911 | acc=0.9495
-2026-03-02 18:45:52,579 [INFO]   Epoch 4 | step 1450/1575 | loss=0.1904 | acc=0.9496
-2026-03-02 18:46:29,612 [INFO]   Epoch 4 | step 1500/1575 | loss=0.1896 | acc=0.9499
-2026-03-02 18:47:06,645 [INFO]   Epoch 4 | step 1550/1575 | loss=0.1896 | acc=0.9498
-2026-03-02 18:47:24,573 [INFO]   Epoch 4 | step 1575/1575 | loss=0.1900 | acc=0.9498
-2026-03-02 18:49:37,324 [INFO]   [Summary] train_loss=0.1900  train_acc=0.9498 | val_loss=0.3323  val_acc=0.9181  val_precision=0.9192  val_recall=0.9181  val_f1=0.9181 | time=1298.8s
-2026-03-02 18:49:37,324 [INFO] 
+2026-06-03 17:36:44,465 [INFO]   Epoch 4 | step 50/1841 | loss=0.2174 | acc=0.9337
+2026-06-03 17:37:21,651 [INFO]   Epoch 4 | step 100/1841 | loss=0.1976 | acc=0.9428
+2026-06-03 17:37:58,832 [INFO]   Epoch 4 | step 150/1841 | loss=0.2053 | acc=0.9408
+2026-06-03 17:38:36,016 [INFO]   Epoch 4 | step 200/1841 | loss=0.2044 | acc=0.9409
+2026-06-03 17:39:13,168 [INFO]   Epoch 4 | step 250/1841 | loss=0.2011 | acc=0.9417
+2026-06-03 17:39:50,331 [INFO]   Epoch 4 | step 300/1841 | loss=0.1943 | acc=0.9435
+2026-06-03 17:40:27,500 [INFO]   Epoch 4 | step 350/1841 | loss=0.1937 | acc=0.9444
+2026-06-03 17:41:04,660 [INFO]   Epoch 4 | step 400/1841 | loss=0.1949 | acc=0.9441
+2026-06-03 17:41:41,823 [INFO]   Epoch 4 | step 450/1841 | loss=0.1939 | acc=0.9445
+2026-06-03 17:42:18,991 [INFO]   Epoch 4 | step 500/1841 | loss=0.1945 | acc=0.9449
+2026-06-03 17:42:56,153 [INFO]   Epoch 4 | step 550/1841 | loss=0.1936 | acc=0.9451
+2026-06-03 17:43:33,313 [INFO]   Epoch 4 | step 600/1841 | loss=0.1929 | acc=0.9457
+2026-06-03 17:44:10,487 [INFO]   Epoch 4 | step 650/1841 | loss=0.1912 | acc=0.9465
+2026-06-03 17:44:47,669 [INFO]   Epoch 4 | step 700/1841 | loss=0.1895 | acc=0.9471
+2026-06-03 17:45:24,849 [INFO]   Epoch 4 | step 750/1841 | loss=0.1893 | acc=0.9473
+2026-06-03 17:46:02,023 [INFO]   Epoch 4 | step 800/1841 | loss=0.1892 | acc=0.9476
+2026-06-03 17:46:39,198 [INFO]   Epoch 4 | step 850/1841 | loss=0.1880 | acc=0.9478
+2026-06-03 17:47:16,368 [INFO]   Epoch 4 | step 900/1841 | loss=0.1883 | acc=0.9476
+2026-06-03 17:47:53,553 [INFO]   Epoch 4 | step 950/1841 | loss=0.1877 | acc=0.9473
+2026-06-03 17:48:30,733 [INFO]   Epoch 4 | step 1000/1841 | loss=0.1874 | acc=0.9469
+2026-06-03 17:49:07,918 [INFO]   Epoch 4 | step 1050/1841 | loss=0.1873 | acc=0.9475
+2026-06-03 17:49:45,104 [INFO]   Epoch 4 | step 1100/1841 | loss=0.1882 | acc=0.9475
+2026-06-03 17:50:22,283 [INFO]   Epoch 4 | step 1150/1841 | loss=0.1881 | acc=0.9477
+2026-06-03 17:50:59,468 [INFO]   Epoch 4 | step 1200/1841 | loss=0.1884 | acc=0.9477
+2026-06-03 17:51:36,662 [INFO]   Epoch 4 | step 1250/1841 | loss=0.1888 | acc=0.9476
+2026-06-03 17:52:13,835 [INFO]   Epoch 4 | step 1300/1841 | loss=0.1890 | acc=0.9473
+2026-06-03 17:52:50,990 [INFO]   Epoch 4 | step 1350/1841 | loss=0.1887 | acc=0.9474
+2026-06-03 17:53:28,161 [INFO]   Epoch 4 | step 1400/1841 | loss=0.1886 | acc=0.9474
+2026-06-03 17:54:05,337 [INFO]   Epoch 4 | step 1450/1841 | loss=0.1879 | acc=0.9475
+2026-06-03 17:54:42,506 [INFO]   Epoch 4 | step 1500/1841 | loss=0.1873 | acc=0.9475
+2026-06-03 17:55:19,673 [INFO]   Epoch 4 | step 1550/1841 | loss=0.1876 | acc=0.9476
+2026-06-03 17:55:56,848 [INFO]   Epoch 4 | step 1600/1841 | loss=0.1875 | acc=0.9474
+2026-06-03 17:56:34,037 [INFO]   Epoch 4 | step 1650/1841 | loss=0.1871 | acc=0.9475
+2026-06-03 17:57:11,219 [INFO]   Epoch 4 | step 1700/1841 | loss=0.1862 | acc=0.9478
+2026-06-03 17:57:48,406 [INFO]   Epoch 4 | step 1750/1841 | loss=0.1867 | acc=0.9477
+2026-06-03 17:58:25,583 [INFO]   Epoch 4 | step 1800/1841 | loss=0.1863 | acc=0.9478
+2026-06-03 17:58:55,685 [INFO]   Epoch 4 | step 1841/1841 | loss=0.1866 | acc=0.9477
+2026-06-03 18:00:35,331 [INFO]   [Summary] train_loss=0.1866  train_acc=0.9477 | val_loss=0.2921  val_acc=0.9169  val_precision=0.9183  val_recall=0.9169  val_f1=0.9166 | time=1468.2s
+2026-06-03 18:00:36,636 [INFO]   Best model checkpoint saved → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/best_model
+2026-06-03 18:00:36,636 [INFO] 
 ── Epoch 5/10 ──────────────────────────────
-2026-03-02 18:50:14,443 [INFO]   Epoch 5 | step 50/1575 | loss=0.1592 | acc=0.9587
-2026-03-02 18:50:51,470 [INFO]   Epoch 5 | step 100/1575 | loss=0.1548 | acc=0.9622
-2026-03-02 18:51:28,497 [INFO]   Epoch 5 | step 150/1575 | loss=0.1552 | acc=0.9598
-2026-03-02 18:52:05,504 [INFO]   Epoch 5 | step 200/1575 | loss=0.1579 | acc=0.9586
-2026-03-02 18:52:42,523 [INFO]   Epoch 5 | step 250/1575 | loss=0.1516 | acc=0.9607
-2026-03-02 18:53:19,519 [INFO]   Epoch 5 | step 300/1575 | loss=0.1496 | acc=0.9605
-2026-03-02 18:53:56,542 [INFO]   Epoch 5 | step 350/1575 | loss=0.1465 | acc=0.9612
-2026-03-02 18:54:33,558 [INFO]   Epoch 5 | step 400/1575 | loss=0.1487 | acc=0.9606
-2026-03-02 18:55:10,611 [INFO]   Epoch 5 | step 450/1575 | loss=0.1483 | acc=0.9612
-2026-03-02 18:55:47,628 [INFO]   Epoch 5 | step 500/1575 | loss=0.1496 | acc=0.9610
-2026-03-02 18:56:24,646 [INFO]   Epoch 5 | step 550/1575 | loss=0.1482 | acc=0.9608
-2026-03-02 18:57:01,666 [INFO]   Epoch 5 | step 600/1575 | loss=0.1478 | acc=0.9607
-2026-03-02 18:57:38,695 [INFO]   Epoch 5 | step 650/1575 | loss=0.1491 | acc=0.9605
-2026-03-02 18:58:15,712 [INFO]   Epoch 5 | step 700/1575 | loss=0.1480 | acc=0.9605
-2026-03-02 18:58:52,731 [INFO]   Epoch 5 | step 750/1575 | loss=0.1525 | acc=0.9598
-2026-03-02 18:59:29,760 [INFO]   Epoch 5 | step 800/1575 | loss=0.1510 | acc=0.9599
-2026-03-02 19:00:06,765 [INFO]   Epoch 5 | step 850/1575 | loss=0.1530 | acc=0.9597
-2026-03-02 19:00:43,775 [INFO]   Epoch 5 | step 900/1575 | loss=0.1525 | acc=0.9599
-2026-03-02 19:01:20,785 [INFO]   Epoch 5 | step 950/1575 | loss=0.1544 | acc=0.9598
-2026-03-02 19:01:57,787 [INFO]   Epoch 5 | step 1000/1575 | loss=0.1560 | acc=0.9595
-2026-03-02 19:02:34,812 [INFO]   Epoch 5 | step 1050/1575 | loss=0.1554 | acc=0.9597
-2026-03-02 19:03:11,837 [INFO]   Epoch 5 | step 1100/1575 | loss=0.1545 | acc=0.9599
-2026-03-02 19:03:48,859 [INFO]   Epoch 5 | step 1150/1575 | loss=0.1547 | acc=0.9600
-2026-03-02 19:04:25,886 [INFO]   Epoch 5 | step 1200/1575 | loss=0.1544 | acc=0.9602
-2026-03-02 19:05:02,888 [INFO]   Epoch 5 | step 1250/1575 | loss=0.1541 | acc=0.9604
-2026-03-02 19:05:39,897 [INFO]   Epoch 5 | step 1300/1575 | loss=0.1537 | acc=0.9607
-2026-03-02 19:06:16,898 [INFO]   Epoch 5 | step 1350/1575 | loss=0.1529 | acc=0.9609
-2026-03-02 19:06:53,909 [INFO]   Epoch 5 | step 1400/1575 | loss=0.1525 | acc=0.9610
-2026-03-02 19:07:30,933 [INFO]   Epoch 5 | step 1450/1575 | loss=0.1520 | acc=0.9612
-2026-03-02 19:08:07,971 [INFO]   Epoch 5 | step 1500/1575 | loss=0.1523 | acc=0.9613
-2026-03-02 19:08:44,992 [INFO]   Epoch 5 | step 1550/1575 | loss=0.1526 | acc=0.9612
-2026-03-02 19:09:02,917 [INFO]   Epoch 5 | step 1575/1575 | loss=0.1529 | acc=0.9611
-2026-03-02 19:11:15,634 [INFO]   [Summary] train_loss=0.1529  train_acc=0.9611 | val_loss=0.3685  val_acc=0.9227  val_precision=0.9229  val_recall=0.9227  val_f1=0.9227 | time=1298.3s
-2026-03-02 19:11:15,634 [INFO] 
+2026-06-03 18:01:13,925 [INFO]   Epoch 5 | step 50/1841 | loss=0.1569 | acc=0.9575
+2026-06-03 18:01:51,100 [INFO]   Epoch 5 | step 100/1841 | loss=0.1480 | acc=0.9591
+2026-06-03 18:02:28,267 [INFO]   Epoch 5 | step 150/1841 | loss=0.1468 | acc=0.9602
+2026-06-03 18:03:05,461 [INFO]   Epoch 5 | step 200/1841 | loss=0.1437 | acc=0.9602
+2026-06-03 18:03:42,628 [INFO]   Epoch 5 | step 250/1841 | loss=0.1438 | acc=0.9607
+2026-06-03 18:04:19,805 [INFO]   Epoch 5 | step 300/1841 | loss=0.1443 | acc=0.9605
+2026-06-03 18:04:56,978 [INFO]   Epoch 5 | step 350/1841 | loss=0.1472 | acc=0.9599
+2026-06-03 18:05:34,143 [INFO]   Epoch 5 | step 400/1841 | loss=0.1464 | acc=0.9602
+2026-06-03 18:06:11,313 [INFO]   Epoch 5 | step 450/1841 | loss=0.1461 | acc=0.9599
+2026-06-03 18:06:48,494 [INFO]   Epoch 5 | step 500/1841 | loss=0.1451 | acc=0.9598
+2026-06-03 18:07:25,667 [INFO]   Epoch 5 | step 550/1841 | loss=0.1450 | acc=0.9598
+2026-06-03 18:08:02,841 [INFO]   Epoch 5 | step 600/1841 | loss=0.1452 | acc=0.9598
+2026-06-03 18:08:40,012 [INFO]   Epoch 5 | step 650/1841 | loss=0.1451 | acc=0.9603
+2026-06-03 18:09:17,189 [INFO]   Epoch 5 | step 700/1841 | loss=0.1440 | acc=0.9611
+2026-06-03 18:09:54,359 [INFO]   Epoch 5 | step 750/1841 | loss=0.1447 | acc=0.9608
+2026-06-03 18:10:31,518 [INFO]   Epoch 5 | step 800/1841 | loss=0.1442 | acc=0.9606
+2026-06-03 18:11:08,687 [INFO]   Epoch 5 | step 850/1841 | loss=0.1452 | acc=0.9605
+2026-06-03 18:11:45,853 [INFO]   Epoch 5 | step 900/1841 | loss=0.1457 | acc=0.9607
+2026-06-03 18:12:23,012 [INFO]   Epoch 5 | step 950/1841 | loss=0.1462 | acc=0.9603
+2026-06-03 18:13:00,181 [INFO]   Epoch 5 | step 1000/1841 | loss=0.1444 | acc=0.9608
+2026-06-03 18:13:37,351 [INFO]   Epoch 5 | step 1050/1841 | loss=0.1467 | acc=0.9604
+2026-06-03 18:14:14,526 [INFO]   Epoch 5 | step 1100/1841 | loss=0.1451 | acc=0.9608
+2026-06-03 18:14:51,700 [INFO]   Epoch 5 | step 1150/1841 | loss=0.1460 | acc=0.9603
+2026-06-03 18:15:28,867 [INFO]   Epoch 5 | step 1200/1841 | loss=0.1455 | acc=0.9605
+2026-06-03 18:16:06,038 [INFO]   Epoch 5 | step 1250/1841 | loss=0.1445 | acc=0.9607
+2026-06-03 18:16:43,207 [INFO]   Epoch 5 | step 1300/1841 | loss=0.1455 | acc=0.9606
+2026-06-03 18:17:20,362 [INFO]   Epoch 5 | step 1350/1841 | loss=0.1449 | acc=0.9606
+2026-06-03 18:17:57,531 [INFO]   Epoch 5 | step 1400/1841 | loss=0.1445 | acc=0.9608
+2026-06-03 18:18:34,690 [INFO]   Epoch 5 | step 1450/1841 | loss=0.1449 | acc=0.9606
+2026-06-03 18:19:11,855 [INFO]   Epoch 5 | step 1500/1841 | loss=0.1447 | acc=0.9606
+2026-06-03 18:19:49,021 [INFO]   Epoch 5 | step 1550/1841 | loss=0.1452 | acc=0.9603
+2026-06-03 18:20:26,181 [INFO]   Epoch 5 | step 1600/1841 | loss=0.1455 | acc=0.9603
+2026-06-03 18:21:03,355 [INFO]   Epoch 5 | step 1650/1841 | loss=0.1458 | acc=0.9602
+2026-06-03 18:21:40,521 [INFO]   Epoch 5 | step 1700/1841 | loss=0.1471 | acc=0.9601
+2026-06-03 18:22:17,697 [INFO]   Epoch 5 | step 1750/1841 | loss=0.1475 | acc=0.9598
+2026-06-03 18:22:54,876 [INFO]   Epoch 5 | step 1800/1841 | loss=0.1480 | acc=0.9596
+2026-06-03 18:23:24,969 [INFO]   Epoch 5 | step 1841/1841 | loss=0.1476 | acc=0.9598
+2026-06-03 18:25:04,551 [INFO]   [Summary] train_loss=0.1476  train_acc=0.9598 | val_loss=0.3139  val_acc=0.9209  val_precision=0.9207  val_recall=0.9209  val_f1=0.9201 | time=1467.9s
+2026-06-03 18:25:04,552 [INFO] 
 ── Epoch 6/10 ──────────────────────────────
-2026-03-02 19:11:52,742 [INFO]   Epoch 6 | step 50/1575 | loss=0.1378 | acc=0.9669
-2026-03-02 19:12:29,744 [INFO]   Epoch 6 | step 100/1575 | loss=0.1251 | acc=0.9691
-2026-03-02 19:13:06,761 [INFO]   Epoch 6 | step 150/1575 | loss=0.1260 | acc=0.9688
-2026-03-02 19:13:43,765 [INFO]   Epoch 6 | step 200/1575 | loss=0.1228 | acc=0.9695
-2026-03-02 19:14:20,773 [INFO]   Epoch 6 | step 250/1575 | loss=0.1204 | acc=0.9702
-2026-03-02 19:14:57,760 [INFO]   Epoch 6 | step 300/1575 | loss=0.1267 | acc=0.9694
-2026-03-02 19:15:34,764 [INFO]   Epoch 6 | step 350/1575 | loss=0.1327 | acc=0.9681
-2026-03-02 19:16:11,764 [INFO]   Epoch 6 | step 400/1575 | loss=0.1325 | acc=0.9683
-2026-03-02 19:16:48,778 [INFO]   Epoch 6 | step 450/1575 | loss=0.1302 | acc=0.9688
-2026-03-02 19:17:25,783 [INFO]   Epoch 6 | step 500/1575 | loss=0.1281 | acc=0.9690
-2026-03-02 19:18:02,784 [INFO]   Epoch 6 | step 550/1575 | loss=0.1254 | acc=0.9691
-2026-03-02 19:18:39,793 [INFO]   Epoch 6 | step 600/1575 | loss=0.1272 | acc=0.9689
-2026-03-02 19:19:16,800 [INFO]   Epoch 6 | step 650/1575 | loss=0.1242 | acc=0.9699
-2026-03-02 19:19:53,815 [INFO]   Epoch 6 | step 700/1575 | loss=0.1216 | acc=0.9702
-2026-03-02 19:20:30,834 [INFO]   Epoch 6 | step 750/1575 | loss=0.1205 | acc=0.9703
-2026-03-02 19:21:07,842 [INFO]   Epoch 6 | step 800/1575 | loss=0.1196 | acc=0.9708
-2026-03-02 19:21:44,856 [INFO]   Epoch 6 | step 850/1575 | loss=0.1188 | acc=0.9710
-2026-03-02 19:22:21,862 [INFO]   Epoch 6 | step 900/1575 | loss=0.1209 | acc=0.9707
-2026-03-02 19:22:58,877 [INFO]   Epoch 6 | step 950/1575 | loss=0.1204 | acc=0.9710
-2026-03-02 19:23:35,862 [INFO]   Epoch 6 | step 1000/1575 | loss=0.1221 | acc=0.9708
-2026-03-02 19:24:12,869 [INFO]   Epoch 6 | step 1050/1575 | loss=0.1227 | acc=0.9707
-2026-03-02 19:24:49,873 [INFO]   Epoch 6 | step 1100/1575 | loss=0.1236 | acc=0.9707
-2026-03-02 19:25:26,887 [INFO]   Epoch 6 | step 1150/1575 | loss=0.1227 | acc=0.9706
-2026-03-02 19:26:03,897 [INFO]   Epoch 6 | step 1200/1575 | loss=0.1230 | acc=0.9706
-2026-03-02 19:26:40,917 [INFO]   Epoch 6 | step 1250/1575 | loss=0.1231 | acc=0.9707
-2026-03-02 19:27:17,944 [INFO]   Epoch 6 | step 1300/1575 | loss=0.1231 | acc=0.9705
-2026-03-02 19:27:54,963 [INFO]   Epoch 6 | step 1350/1575 | loss=0.1245 | acc=0.9705
-2026-03-02 19:28:31,986 [INFO]   Epoch 6 | step 1400/1575 | loss=0.1233 | acc=0.9708
-2026-03-02 19:29:09,018 [INFO]   Epoch 6 | step 1450/1575 | loss=0.1237 | acc=0.9706
-2026-03-02 19:29:46,057 [INFO]   Epoch 6 | step 1500/1575 | loss=0.1245 | acc=0.9703
-2026-03-02 19:30:23,092 [INFO]   Epoch 6 | step 1550/1575 | loss=0.1253 | acc=0.9702
-2026-03-02 19:30:41,021 [INFO]   Epoch 6 | step 1575/1575 | loss=0.1246 | acc=0.9703
-2026-03-02 19:32:53,726 [INFO]   [Summary] train_loss=0.1246  train_acc=0.9703 | val_loss=0.4426  val_acc=0.9162  val_precision=0.9173  val_recall=0.9162  val_f1=0.9162 | time=1298.1s
-2026-03-02 19:32:53,726 [INFO] 
-🛑 Early stopping triggered after epoch 6 (no val_loss improvement for 3 consecutive epochs).
-2026-03-02 19:32:53,726 [INFO] 
-Saving final model → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2
-2026-03-02 19:32:54,478 [INFO] Training history → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/training_history.csv
-2026-03-02 19:32:54,478 [INFO] 
+2026-06-03 18:25:41,847 [INFO]   Epoch 6 | step 50/1841 | loss=0.1135 | acc=0.9725
+2026-06-03 18:26:19,014 [INFO]   Epoch 6 | step 100/1841 | loss=0.1139 | acc=0.9697
+2026-06-03 18:26:56,186 [INFO]   Epoch 6 | step 150/1841 | loss=0.1140 | acc=0.9702
+2026-06-03 18:27:33,364 [INFO]   Epoch 6 | step 200/1841 | loss=0.1170 | acc=0.9697
+2026-06-03 18:28:10,543 [INFO]   Epoch 6 | step 250/1841 | loss=0.1239 | acc=0.9685
+2026-06-03 18:28:47,705 [INFO]   Epoch 6 | step 300/1841 | loss=0.1227 | acc=0.9685
+2026-06-03 18:29:24,882 [INFO]   Epoch 6 | step 350/1841 | loss=0.1249 | acc=0.9678
+2026-06-03 18:30:02,064 [INFO]   Epoch 6 | step 400/1841 | loss=0.1273 | acc=0.9676
+2026-06-03 18:30:39,241 [INFO]   Epoch 6 | step 450/1841 | loss=0.1279 | acc=0.9672
+2026-06-03 18:31:16,418 [INFO]   Epoch 6 | step 500/1841 | loss=0.1236 | acc=0.9676
+2026-06-03 18:31:53,594 [INFO]   Epoch 6 | step 550/1841 | loss=0.1232 | acc=0.9677
+2026-06-03 18:32:30,781 [INFO]   Epoch 6 | step 600/1841 | loss=0.1222 | acc=0.9679
+2026-06-03 18:33:07,961 [INFO]   Epoch 6 | step 650/1841 | loss=0.1224 | acc=0.9680
+2026-06-03 18:33:45,136 [INFO]   Epoch 6 | step 700/1841 | loss=0.1224 | acc=0.9681
+2026-06-03 18:34:22,309 [INFO]   Epoch 6 | step 750/1841 | loss=0.1222 | acc=0.9681
+2026-06-03 18:34:59,480 [INFO]   Epoch 6 | step 800/1841 | loss=0.1214 | acc=0.9681
+2026-06-03 18:35:36,644 [INFO]   Epoch 6 | step 850/1841 | loss=0.1219 | acc=0.9682
+2026-06-03 18:36:13,807 [INFO]   Epoch 6 | step 900/1841 | loss=0.1197 | acc=0.9687
+2026-06-03 18:36:50,971 [INFO]   Epoch 6 | step 950/1841 | loss=0.1186 | acc=0.9689
+2026-06-03 18:37:28,136 [INFO]   Epoch 6 | step 1000/1841 | loss=0.1183 | acc=0.9689
+2026-06-03 18:38:05,308 [INFO]   Epoch 6 | step 1050/1841 | loss=0.1180 | acc=0.9690
+2026-06-03 18:38:42,481 [INFO]   Epoch 6 | step 1100/1841 | loss=0.1191 | acc=0.9689
+2026-06-03 18:39:19,632 [INFO]   Epoch 6 | step 1150/1841 | loss=0.1197 | acc=0.9687
+2026-06-03 18:39:56,771 [INFO]   Epoch 6 | step 1200/1841 | loss=0.1204 | acc=0.9685
+2026-06-03 18:40:33,931 [INFO]   Epoch 6 | step 1250/1841 | loss=0.1201 | acc=0.9686
+2026-06-03 18:41:11,076 [INFO]   Epoch 6 | step 1300/1841 | loss=0.1211 | acc=0.9681
+2026-06-03 18:41:48,236 [INFO]   Epoch 6 | step 1350/1841 | loss=0.1209 | acc=0.9681
+2026-06-03 18:42:25,400 [INFO]   Epoch 6 | step 1400/1841 | loss=0.1211 | acc=0.9681
+2026-06-03 18:43:02,554 [INFO]   Epoch 6 | step 1450/1841 | loss=0.1206 | acc=0.9683
+2026-06-03 18:43:39,719 [INFO]   Epoch 6 | step 1500/1841 | loss=0.1204 | acc=0.9684
+2026-06-03 18:44:16,880 [INFO]   Epoch 6 | step 1550/1841 | loss=0.1196 | acc=0.9685
+2026-06-03 18:44:54,040 [INFO]   Epoch 6 | step 1600/1841 | loss=0.1197 | acc=0.9685
+2026-06-03 18:45:31,203 [INFO]   Epoch 6 | step 1650/1841 | loss=0.1202 | acc=0.9686
+2026-06-03 18:46:08,372 [INFO]   Epoch 6 | step 1700/1841 | loss=0.1214 | acc=0.9684
+2026-06-03 18:46:45,526 [INFO]   Epoch 6 | step 1750/1841 | loss=0.1209 | acc=0.9685
+2026-06-03 18:47:22,678 [INFO]   Epoch 6 | step 1800/1841 | loss=0.1210 | acc=0.9686
+2026-06-03 18:47:52,738 [INFO]   Epoch 6 | step 1841/1841 | loss=0.1206 | acc=0.9686
+2026-06-03 18:49:32,251 [INFO]   [Summary] train_loss=0.1206  train_acc=0.9686 | val_loss=0.3292  val_acc=0.9223  val_precision=0.9220  val_recall=0.9223  val_f1=0.9216 | time=1467.7s
+2026-06-03 18:49:32,252 [INFO] 
+── Epoch 7/10 ──────────────────────────────
+2026-06-03 18:50:09,501 [INFO]   Epoch 7 | step 50/1841 | loss=0.1040 | acc=0.9769
+2026-06-03 18:50:46,641 [INFO]   Epoch 7 | step 100/1841 | loss=0.0980 | acc=0.9766
+2026-06-03 18:51:23,783 [INFO]   Epoch 7 | step 150/1841 | loss=0.0993 | acc=0.9750
+2026-06-03 18:52:00,928 [INFO]   Epoch 7 | step 200/1841 | loss=0.0992 | acc=0.9753
+2026-06-03 18:52:38,080 [INFO]   Epoch 7 | step 250/1841 | loss=0.0954 | acc=0.9760
+2026-06-03 18:53:15,229 [INFO]   Epoch 7 | step 300/1841 | loss=0.0928 | acc=0.9766
+2026-06-03 18:53:52,366 [INFO]   Epoch 7 | step 350/1841 | loss=0.0948 | acc=0.9759
+2026-06-03 18:54:29,518 [INFO]   Epoch 7 | step 400/1841 | loss=0.0945 | acc=0.9759
+2026-06-03 18:55:06,666 [INFO]   Epoch 7 | step 450/1841 | loss=0.0953 | acc=0.9760
+2026-06-03 18:55:43,810 [INFO]   Epoch 7 | step 500/1841 | loss=0.0962 | acc=0.9758
+2026-06-03 18:56:20,949 [INFO]   Epoch 7 | step 550/1841 | loss=0.0956 | acc=0.9761
+2026-06-03 18:56:58,096 [INFO]   Epoch 7 | step 600/1841 | loss=0.0968 | acc=0.9762
+2026-06-03 18:57:35,250 [INFO]   Epoch 7 | step 650/1841 | loss=0.0965 | acc=0.9760
+2026-06-03 18:58:12,402 [INFO]   Epoch 7 | step 700/1841 | loss=0.0957 | acc=0.9761
+2026-06-03 18:58:49,549 [INFO]   Epoch 7 | step 750/1841 | loss=0.0970 | acc=0.9758
+2026-06-03 18:59:26,679 [INFO]   Epoch 7 | step 800/1841 | loss=0.0973 | acc=0.9757
+2026-06-03 19:00:03,807 [INFO]   Epoch 7 | step 850/1841 | loss=0.0967 | acc=0.9757
+2026-06-03 19:00:40,936 [INFO]   Epoch 7 | step 900/1841 | loss=0.0974 | acc=0.9754
+2026-06-03 19:01:18,074 [INFO]   Epoch 7 | step 950/1841 | loss=0.0975 | acc=0.9757
+2026-06-03 19:01:55,214 [INFO]   Epoch 7 | step 1000/1841 | loss=0.0962 | acc=0.9758
+2026-06-03 19:02:32,360 [INFO]   Epoch 7 | step 1050/1841 | loss=0.0966 | acc=0.9760
+2026-06-03 19:03:09,507 [INFO]   Epoch 7 | step 1100/1841 | loss=0.0977 | acc=0.9758
+2026-06-03 19:03:46,648 [INFO]   Epoch 7 | step 1150/1841 | loss=0.0969 | acc=0.9757
+2026-06-03 19:04:23,794 [INFO]   Epoch 7 | step 1200/1841 | loss=0.0993 | acc=0.9753
+2026-06-03 19:05:00,933 [INFO]   Epoch 7 | step 1250/1841 | loss=0.0986 | acc=0.9756
+2026-06-03 19:05:38,078 [INFO]   Epoch 7 | step 1300/1841 | loss=0.0975 | acc=0.9759
+2026-06-03 19:06:15,213 [INFO]   Epoch 7 | step 1350/1841 | loss=0.0975 | acc=0.9758
+2026-06-03 19:06:52,355 [INFO]   Epoch 7 | step 1400/1841 | loss=0.0990 | acc=0.9755
+2026-06-03 19:07:29,511 [INFO]   Epoch 7 | step 1450/1841 | loss=0.1001 | acc=0.9753
+2026-06-03 19:08:06,676 [INFO]   Epoch 7 | step 1500/1841 | loss=0.1003 | acc=0.9752
+2026-06-03 19:08:43,852 [INFO]   Epoch 7 | step 1550/1841 | loss=0.1005 | acc=0.9752
+2026-06-03 19:09:21,008 [INFO]   Epoch 7 | step 1600/1841 | loss=0.1009 | acc=0.9751
+2026-06-03 19:09:58,164 [INFO]   Epoch 7 | step 1650/1841 | loss=0.1007 | acc=0.9751
+2026-06-03 19:10:35,318 [INFO]   Epoch 7 | step 1700/1841 | loss=0.1003 | acc=0.9752
+2026-06-03 19:11:12,471 [INFO]   Epoch 7 | step 1750/1841 | loss=0.0994 | acc=0.9754
+2026-06-03 19:11:49,628 [INFO]   Epoch 7 | step 1800/1841 | loss=0.0995 | acc=0.9754
+2026-06-03 19:12:19,688 [INFO]   Epoch 7 | step 1841/1841 | loss=0.0989 | acc=0.9755
+2026-06-03 19:13:59,278 [INFO]   [Summary] train_loss=0.0989  train_acc=0.9755 | val_loss=0.3801  val_acc=0.9198  val_precision=0.9197  val_recall=0.9198  val_f1=0.9190 | time=1467.0s
+2026-06-03 19:13:59,278 [INFO] 
+🛑 Early stopping triggered after epoch 7 (no val_loss improvement for 3 consecutive epochs).
+2026-06-03 19:13:59,278 [INFO] Training history → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/training_history.csv
+2026-06-03 19:13:59,279 [INFO] 
 Evaluating on test set …
-2026-03-02 19:35:07,501 [INFO]   Test loss: 0.3283  Test acc: 0.9120  Test precision: 0.9134  Test recall: 0.9120  Test F1: 0.9122
-2026-03-02 19:35:08,124 [INFO]   Confusion matrix saved → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/confusion_matrix.png
-2026-03-02 19:35:08,124 [INFO] ============================================================
-2026-03-02 19:35:08,124 [INFO] Training complete.
-2026-03-02 19:35:08,125 [INFO]   Best model:  /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/best_model
-2026-03-02 19:35:08,125 [INFO]   Final model: /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2
-2026-03-02 19:35:08,125 [INFO]   History:     /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/training_history.csv
-2026-03-02 19:35:08,125 [INFO] ============================================================
+2026-06-03 19:15:39,038 [INFO]   Test loss: 0.2854  Test acc: 0.9188  Test precision: 0.9202  Test recall: 0.9188  Test F1: 0.9186
+2026-06-03 19:15:39,555 [INFO]   Confusion matrix saved → /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/confusion_matrix.png
+2026-06-03 19:15:39,555 [INFO] ============================================================
+2026-06-03 19:15:39,555 [INFO] Training complete.
+2026-06-03 19:15:39,555 [INFO]   Best model: /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/best_model
+2026-06-03 19:15:39,555 [INFO]   History:    /home/long/myProjects/vietnamese-news-classification-phobert/phobert-v2/training_history.csv
+2026-06-03 19:15:39,555 [INFO] ============================================================
